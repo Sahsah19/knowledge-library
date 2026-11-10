@@ -20,20 +20,20 @@ body:
   venue: Proceedings of the National Academy of Sciences, 2025, Vol. 122, No. 26, e2422633122
   identifier: 10.1073/pnas.2422633122
   source_quality: A
-  design: randomized_controlled_trial
+  design: rct
   n_reported: 1000
   population: adolescent
-  agent_studied: both
-  unit_of_analysis: between_person
   peer_reviewed: journal
   preregistered: true
   replication_status: none_known
-  conflicts: not_assessed
+  conflicts: none_declared
   integrity_flag: correction_issued
   design_fits_own_claims: true
   grade_reasoning: Preregistered field RCT with a designated primary analysis, nearly 1,000 students across about fifty classes, independent graders, peer-reviewed in PNAS. The design fits the paper's causal claim about tool arms.
-  design_caveat: One high school in Turkey, mathematics only, in-class review sessions rather than homework, and a research-built tool rather than a product. The arms compare whole tools, so the effect of any single response type is not isolated. The GPT Tutor prompt carried teacher-written solutions and common mistakes. The paper reports 'nearly 1,000' students; n_reported rounds that. A published correction exists (PNAS 2025;122(34):e2518204122) and was not read for this entry. Conflicts were not assessed.
+  design_caveat: One high school in Turkey, mathematics only, in-class review sessions rather than homework, and a research-built tool rather than a product. The arms compare whole tools, so the effect of any single response type is not isolated. The GPT Tutor prompt carried teacher-written solutions and common mistakes. The paper reports 'nearly 1,000' students; n_reported rounds that. A published correction exists (PNAS 2025;122(34):e2518204122) and was not read for this entry.
   canonical_record: Bastani, Bastani, Sungu, Ge, Kabakcı & Mariman 2025, PNAS 122(26):e2422633122, doi:10.1073/pnas.2422633122; open-access full text PMC12232635.
+  agent_studied: both
+  unit_of_analysis: between_person
   license_status: known_permissive
   license_terms: CC BY-NC-ND 4.0 (as stated on the article)
   verified_as_of: '2026-11-10'

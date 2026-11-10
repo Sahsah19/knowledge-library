@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../schema/ai_behavior.schema.json
 id: kl-001135
 display_id: AiBehavior-109
-label: The AI asks what the student has tried before helping
+label: The AI asks what the person has tried before helping with set work
 type: ai_behavior
 layer: observation
 definition: Before giving any solution content, the AI asks the person what they have tried, what they already know about the problem, or where exactly they are stuck.

@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../schema/user_behavior.schema.json
 id: kl-001129
 display_id: UserBehavior-99
-label: The student asks the AI for the full answer to set work without showing an attempt
+label: The person asks the AI for the full answer to set work without showing an attempt
 type: user_behavior
 layer: observation
 definition: 'The person puts a problem from work they have been set (homework, a worksheet, an assignment) to the AI and asks for the answer or the complete solution, and their turn contains no attempt of their own: no working, no candidate answer, no statement of where they got stuck.'
@@ -12,10 +12,10 @@ distinguish_from:
   boundary: There the person brings their own working. Here the turn contains none.
 body:
   detectable_from: person_turns
-  person_state_kind: process
   observable_criteria: 'Both of: (a) the turn presents a problem the person says or plainly implies was set for them (pasted question text, ''question 4 on my worksheet'', ''my homework is'') and asks for the answer, the solution, or for the AI to do it (''what''s the answer'', ''solve this'', ''just do it for me''); and (b) the turn contains no working, no candidate answer and no account of where they are stuck.'
   exclusions: 'Not counted: a request that includes the person''s own attempt or candidate answer (that is kl-001131). Not counted: a request to check an answer the person gives. Not counted: a request to explain a concept with no set problem attached. Not counted: pasted question text with a request for a hint or an explanation of the method rather than the answer.'
   detection_window: single_turn
+  person_state_kind: process
   condition_tags:
   - kl-000630
   - kl-001124
@@ -46,6 +46,7 @@ claim_evidence:
   locator: Introduction, summary of findings
   licenses: High school students using an unguarded GPT-4 tutor often asked for and copied solutions, which is c1.
   fit: direct
+  bridge: null
   contributes: existence
   contradicts: false
 - claim_id: c2
@@ -54,5 +55,6 @@ claim_evidence:
   locator: Results, student engagement (Fig. 3 and SI Appendix C.2)
   licenses: The authors treat a student message that repeats the question or asks for the answer as an identifiable category in the logged messages, which is c2.
   fit: direct
+  bridge: null
   contributes: detectability
   contradicts: false

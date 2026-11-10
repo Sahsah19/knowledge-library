@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=../../schema/pathway.schema.json
 id: kl-001142
 display_id: Pathway-120
-label: The AI hands a student new to the problem the full answer, with mixed effect
+label: The AI hands over the full answer to set work the person is new to, with mixed effect
 type: pathway
 layer: judgment
-definition: 'The same exchange as kl-001140, a request for the answer without an attempt met by the full solution, but the student is new to this kind of problem and could not have made a start alone. Here the direction is not settled: a complete solution is the kind of worked example novices can learn from, and is also the answer they can copy without learning. Which one happens is not readable from the AI''s turn.'
+definition: 'The same exchange as kl-001140, a request for the answer without an attempt met by the full solution, but the person is new to this kind of problem and could not have made a start alone. Here the direction is not settled: a complete solution is the kind of worked example novices can learn from, and is also the answer they can copy without learning. Which one happens is not readable from the AI''s turn.'
 body:
   composition_parts:
   - kind: ai_behavior
@@ -56,15 +56,15 @@ claim_evidence:
   locator: p. 58
   licenses: States that a difficulty becomes undesirable when the learner lacks the background to respond to it, which is why the harmful sign of kl-001140 is not carried over to the novice.
   fit: analogical
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
   contributes: context_dependence
   contradicts: false
-  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
 - claim_id: c2
   source: kl-001146
   quote: Desirable difficulties, versus the array of undesirable difficulties, are desirable because they trigger encoding and retrieval processes that support learning, comprehension, and remembering.
   locator: p. 58
   licenses: 'States what makes a difficulty desirable: it triggers the processes that support learning. For a learner who cannot respond to it, it does not.'
   fit: analogical
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
   contributes: frame
   contradicts: false
-  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.

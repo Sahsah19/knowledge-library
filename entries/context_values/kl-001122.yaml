@@ -31,6 +31,6 @@ claim_evidence:
   locator: Experimental Design
   licenses: Students in 9th to 11th grade used a generative AI tutor on mathematics practice problems, which is c1 for the upper secondary stage.
   fit: adjacent
+  bridge: In-class review sessions in one Turkish high school with a research-built tool, not homework done at home with a general-purpose assistant.
   contributes: existence
   contradicts: false
-  bridge: In-class review sessions in one Turkish high school with a research-built tool, not homework done at home with a general-purpose assistant.

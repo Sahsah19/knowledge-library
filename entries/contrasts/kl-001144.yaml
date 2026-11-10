@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=../../schema/contrast.schema.json
 id: kl-001144
 display_id: Contrast-5
-label: The AI gives a practised student the full answer or a hint
+label: The AI hands over the full answer or gives a hint on set work the person could have done
 type: contrast
 layer: judgment
-definition: Two responses to the same request from a student under 18, practised at the kind of problem, for the answer to set work with no attempt shown. In one the AI gives the full solution (the practice is done for them); in the other it gives a hint and leaves the rest (the thinking stays with them). Request and gates are fixed; only the response differs.
+definition: Two responses to the same request from a person under 18, practised at the kind of problem, for the answer to set work with no attempt shown. In one the AI gives the full solution (the practice is done for them); in the other it gives a hint and leaves the rest (the thinking stays with them). Request and gates are fixed; only the response differs.
 body:
   members:
   - kl-001140
@@ -29,9 +29,9 @@ claim_evidence:
   locator: Abstract
   licenses: 'The same students, the same problems: the learning loss under unguarded access was largely absent under the hint-only tutor, which is the contrast c1 states.'
   fit: adjacent
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
   contributes: harm_evidence
   contradicts: false
-  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
 claims:
 - id: c1
   kind: context_dependence

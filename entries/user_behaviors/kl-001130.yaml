@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../schema/user_behavior.schema.json
 id: kl-001130
 display_id: UserBehavior-100
-label: The student says they are bad at the subject or cannot do it
+label: The person says they are bad at the subject or cannot do it
 type: user_behavior
 layer: observation
 definition: The person states a fixed negative judgment of their own ability in the subject or kind of problem ('I'm just bad at maths', 'I can't do these', 'I'm too dumb for this'). What is pointable is the statement; it says nothing observed about their actual ability.
@@ -10,10 +10,10 @@ distinguish_from:
   boundary: That entry is a request for the answer. This entry is a statement about the self, and can occur with or without such a request.
 body:
   detectable_from: person_report
-  person_state_kind: state
   observable_criteria: A person turn contains a first-person statement that they lack ability in the subject or kind of problem, phrased as a general fact about themselves rather than about this one problem ('I'm bad at', 'I'll never get', 'I'm not a maths person', 'I can't do these').
   exclusions: 'Not counted: a statement about this problem only (''I''m stuck on part b''). Not counted: a statement of missing knowledge with no judgment of ability (''we haven''t done this yet''). Not counted: joking that the turn itself marks as joking.'
   detection_window: single_turn
+  person_state_kind: state
   condition_tags:
   - kl-000630
 sources: []

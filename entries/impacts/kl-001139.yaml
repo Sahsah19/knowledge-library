@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../schema/impact.schema.json
 id: kl-001139
 display_id: Impact-29
-label: The student does the thinking the work was set for, and keeps the chance to learn from it
+label: The person ends up doing the thinking the work was set for, keeping the chance to learn from it
 type: impact
 layer: judgment
 definition: The person does the reasoning a set problem was meant to give them practice in, rather than receiving it done, so the learning opportunity the task was set to provide is kept. The state is the opportunity kept, not a measured gain in skill.
@@ -35,6 +35,7 @@ claim_evidence:
   locator: Introduction, summary of findings
   licenses: Students using the hint-only tutor independently attempted answers, which is c1.
   fit: direct
+  bridge: null
   contributes: existence
   contradicts: false
 - claim_id: c2
@@ -43,14 +44,15 @@ claim_evidence:
   locator: p. 61
   licenses: States that being shown what one could have generated costs a learning opportunity, which is c2.
   fit: analogical
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
   contributes: frame
   contradicts: false
-  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
 - claim_id: c2
   source: kl-001145
   quote: Student performance in the GPT Tutor arm was statistically indistinguishable from that of the control arm
   locator: Results, main results
   licenses: The hint-only arm avoided the loss but showed no gain over students without AI. This cuts against reading the opportunity kept as a measured gain, which is why c2 claims only the opportunity.
   fit: direct
+  bridge: null
   contributes: counterexample
   contradicts: true

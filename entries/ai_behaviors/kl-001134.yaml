@@ -39,5 +39,6 @@ claim_evidence:
   locator: Results, student engagement (Fig. 3)
   licenses: The authors state as a hypothesis, consistent with the message counts, that the unguarded tutor simply provided solutions. That supports c1 as a stated position, not an observed rate.
   fit: direct
+  bridge: null
   contributes: frame
   contradicts: false

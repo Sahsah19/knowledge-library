@@ -1,10 +1,10 @@
 # yaml-language-server: $schema=../../schema/pathway.schema.json
 id: kl-001143
 display_id: Pathway-121
-label: A student says they are bad at the subject, the AI does the work, and the belief stays
+label: The person says they are bad at the subject, the AI does the work, and the belief stays
 type: pathway
 layer: judgment
-definition: A student under 18 says they are bad at the subject, and the AI responds by giving the full solution. The response does nothing to test the belief and, by doing the work for them, is consistent with it; the asserted route is that the student's confidence in their own capacity is held where it is or lowered.
+definition: A person under 18 says they are bad at the subject, and the AI responds by giving the full solution. The response does nothing to test the belief and, by doing the work for them, is consistent with it; the asserted route is that the person's confidence in their own capacity is held where it is or lowered.
 body:
   composition_parts:
   - kind: ai_behavior
@@ -27,7 +27,7 @@ body:
     sign: harmful
     level_of_analysis: individual
     basis_kind: ASSERTED
-  counterpart_owed: A response that takes the statement seriously and offers a first step the student can manage. No entry states it, and the catalog has no impact for academic anxiety, which this pathway's definition would also reach.
+  counterpart_owed: A response that takes the statement seriously and offers a first step the person can manage. No entry states it, and the catalog has no impact for academic anxiety, which this pathway's definition would also reach.
 sources: []
 standing:
   value: plausible_unobserved
@@ -37,6 +37,9 @@ standing:
 lifecycle:
   status: draft
   since: '2026-11-10'
+distinguish_from:
+- neighbor: kl-001140
+  boundary: Both have the AI give the full solution. Here the person's turn is a statement that they are bad at the subject, and the impact is on their confidence; there it is a request with no attempt by a person practised at the problem, and the impact is on their capacity. A coder reads the person's turn.
 claims:
 - id: c1
   kind: existence
@@ -44,4 +47,8 @@ claims:
 - id: c2
   kind: pathway_link
   text: A full solution given in reply to a statement of inability holds in place or lowers the student's confidence in their own capacity (impact kl-000020).
+- id: c3
+  kind: definition_boundary
+  text: 'This pathway is separated from kl-001140 by the person''s turn: a statement of inability here, a request with no attempt there.'
+  grounding_eligible: false
 claim_evidence: []

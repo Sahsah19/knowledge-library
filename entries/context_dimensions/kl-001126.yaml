@@ -4,7 +4,7 @@ display_id: Dimension-16
 label: How practised the person already is at the kind of problem they bring
 type: context_dimension
 layer: context
-definition: Whether the person already has the background to attempt the kind of problem they bring, or meets it for the first time. It is a fact about the person in relation to one kind of problem, so the same student can be a novice in one topic and practised in another.
+definition: Whether the person already has the background to attempt the kind of problem they bring, or meets it for the first time. It is a fact about the person in relation to one kind of problem, so the same person can be a novice in one topic and practised in another.
 body:
   about: person
   value_space: enumerated
@@ -33,6 +33,6 @@ claim_evidence:
   locator: p. 58, 'Introducing Desirable Difficulties to Enhance Learning and Instruction'
   licenses: States that whether a difficulty helps learning turns on the learner's background knowledge or skills, which is the dependence c2 asserts.
   fit: analogical
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
   contributes: frame
   contradicts: false
-  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.

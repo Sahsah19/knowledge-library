@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=../../schema/ai_behavior.schema.json
 id: kl-001136
 display_id: AiBehavior-110
-label: The AI gives a hint or next step and leaves the rest to the student
+label: The AI gives a hint or next step and leaves the rest to the person
 type: ai_behavior
 layer: observation
 definition: The AI responds to a request for help with a set problem by giving a hint, a pointer to the relevant method, or the next single step, and explicitly leaves the remaining work, including the final answer, to the person.
@@ -34,5 +34,6 @@ claim_evidence:
   locator: Experimental Design
   licenses: The study's tutor was instructed to give hints without the answer, which defines the behavior in c1 as something a GPT-4 tutor can be set to do.
   fit: direct
+  bridge: null
   contributes: definition
   contradicts: false
