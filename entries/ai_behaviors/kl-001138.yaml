@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../../schema/ai_behavior.schema.json
+id: kl-001138
+display_id: AiBehavior-112
+label: The AI gives the full solution after first holding it back
+type: ai_behavior
+layer: observation
+definition: Having held back the full solution in an earlier turn (with a hint, a question or a partial step), the AI gives the final answer or a complete solution to the same set problem after the person presses again.
+distinguish_from:
+- neighbor: kl-001134
+  boundary: That entry gives the solution in the first response. This entry gives it only after an earlier turn withheld it.
+body:
+  observable_criteria: 'All of: (a) an earlier AI turn on the set problem gave a hint, question or partial step and not the full solution; (b) a later person turn asks again for the answer; (c) a later AI turn gives the final answer or every step needed to reach it. The turn at which (c) occurs is recorded.'
+  exclusions: 'Not counted: a full solution given after the person has worked the problem through and asks for confirmation. Not counted: a worked parallel example (kl-001137).'
+  detection_window: multi_turn
+  groups:
+  - homework-help
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype documents an AI tutor giving up the answer after first holding it back. This is one of the things the prototype's test cases are built to measure.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: AI systems that first withhold the solution to a set problem give it after the student presses again.
+- id: c2
+  kind: detection_window
+  text: The behavior needs more than two turns to read.
+claim_evidence: []

@@ -1,0 +1,69 @@
+# yaml-language-server: $schema=../../schema/pathway.schema.json
+id: kl-001141
+display_id: Pathway-119
+label: The AI gives a practised student a hint, and the thinking stays with them
+type: pathway
+layer: judgment
+definition: A student under 18 who could have attempted a set problem asks for the answer without trying, and the AI gives a hint or the next step and leaves the rest to them. The reasoning the task was set to practise stays with the student; this is the productive struggle the full-solution pathway forecloses.
+body:
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-001136
+    role: originator
+  - kind: user_behavior
+    id: kl-001129
+    role: initiator
+  - kind: context_value
+    id: kl-000630
+    role: condition
+  - kind: context_value
+    id: kl-001128
+    role: condition
+  composition_type: conjunctive
+  composition_instruction: The hint is on the problem the person asked about, and no later turn in the conversation gives the full solution; if one does, the conversation is read against kl-001140 at that turn.
+  mechanisms: []
+  impacts:
+  - impact: kl-001139
+    onset_mode: new
+    horizon: immediate
+    sign: protective
+    level_of_analysis: population
+    basis_kind: SOURCED_QUOTE
+sources: []
+standing:
+  value: theorized
+  basis: Bastani et al. 2025 found that students with a hint-only GPT-4 tutor attempted answers themselves and did not suffer the learning loss seen with an unguarded one; they also found no gain over students without AI. The comparison is between tools, not single responses, and the tutor had teacher-written solutions to work from, which a general-purpose assistant does not.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+distinguish_from:
+- neighbor: kl-001140
+  boundary: Same request and gate; the response gives a hint here and the full solution there.
+claims:
+- id: c1
+  kind: existence
+  text: A practised student asks an AI for the answer without an attempt, and the AI gives a hint and leaves the rest.
+- id: c2
+  kind: pathway_link
+  text: Given a hint rather than the solution, the student does the reasoning themselves (impact kl-001139).
+claim_evidence:
+- claim_id: c2
+  source: kl-001145
+  quote: Furthermore, an analysis of student interactions shows that students often use GPT Base as a “crutch” by asking for and copying solutions, but they use GPT Tutor in more substantive ways like asking for help or independently attempting answers.
+  locator: Introduction, summary of findings
+  licenses: Students with the hint-only tutor independently attempted answers, which is the outcome c2 names.
+  fit: adjacent
+  contributes: harm_evidence
+  contradicts: false
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
+- claim_id: c2
+  source: kl-001145
+  quote: First, the prompt instructs GPT-4 to provide hints to the student without directly giving them the answer, to encourage learning
+  locator: Experimental Design
+  licenses: The tutor that produced that outcome was instructed to give hints without the answer, which is the response in this pathway.
+  fit: adjacent
+  contributes: definition
+  contradicts: false
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.

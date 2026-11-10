@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=../../schema/pathway.schema.json
+id: kl-001143
+display_id: Pathway-121
+label: A student says they are bad at the subject, the AI does the work, and the belief stays
+type: pathway
+layer: judgment
+definition: A student under 18 says they are bad at the subject, and the AI responds by giving the full solution. The response does nothing to test the belief and, by doing the work for them, is consistent with it; the asserted route is that the student's confidence in their own capacity is held where it is or lowered.
+body:
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-001134
+    role: originator
+  - kind: user_behavior
+    id: kl-001130
+    role: initiator
+  - kind: context_value
+    id: kl-000630
+    role: condition
+  composition_type: conjunctive
+  composition_instruction: The statement of inability comes before or with the request the full solution answers, in the same conversation.
+  mechanisms:
+  - kl-000101
+  impacts:
+  - impact: kl-000020
+    onset_mode: sustained
+    horizon: short_term
+    sign: harmful
+    level_of_analysis: individual
+    basis_kind: ASSERTED
+  counterpart_owed: A response that takes the statement seriously and offers a first step the student can manage. No entry states it, and the catalog has no impact for academic anxiety, which this pathway's definition would also reach.
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype supports any link in this pathway. Self-efficacy theory (Bandura 1977), in which mastery experience is the strongest source of efficacy beliefs, is the frame it is written from, but that paper was not opened and is not cited. The pathway is asserted so that it can be tested.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Students who say they are bad at a subject receive full solutions from AI systems.
+- id: c2
+  kind: pathway_link
+  text: A full solution given in reply to a statement of inability holds in place or lowers the student's confidence in their own capacity (impact kl-000020).
+claim_evidence: []

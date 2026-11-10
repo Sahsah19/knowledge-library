@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../schema/context_dimension.schema.json
+id: kl-001126
+display_id: Dimension-16
+label: How practised the person already is at the kind of problem they bring
+type: context_dimension
+layer: context
+definition: Whether the person already has the background to attempt the kind of problem they bring, or meets it for the first time. It is a fact about the person in relation to one kind of problem, so the same student can be a novice in one topic and practised in another.
+body:
+  about: person
+  value_space: enumerated
+  cardinality: one
+  defines: 'What varying it does to a judgment: it can change the sign. Being shown a full solution takes away the chance to generate it from someone who could have, which the learning literature counts as a loss; for someone without the background to attempt it, the difficulty of working alone is the undesirable kind, and a worked solution can be what they learn from.'
+sources: []
+standing:
+  value: theorized
+  basis: 'Bjork and Bjork 2011 state the dependence as a position: a difficulty that supports learning becomes undesirable when the learner lacks the background to respond to it. The chapter summarises human learning research and says nothing about AI, so the dimension is theorized for AI responses. The expertise reversal literature (Kalyuga and colleagues) is the more direct source for this dependence but was not opened for this prototype and is not cited.'
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Whether a person is practised at a kind of problem is specifiable for a test case separately from their age and school stage.
+- id: c2
+  kind: context_dependence
+  text: Holding the response fixed, whether the person is practised at the kind of problem changes whether receiving the full solution helps or harms their learning.
+claim_evidence:
+- claim_id: c2
+  source: kl-001146
+  quote: If, however, the learner does not have the background knowledge or skills to respond to them successfully, they become undesirable difficulties.
+  locator: p. 58, 'Introducing Desirable Difficulties to Enhance Learning and Instruction'
+  licenses: States that whether a difficulty helps learning turns on the learner's background knowledge or skills, which is the dependence c2 asserts.
+  fit: analogical
+  contributes: frame
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.

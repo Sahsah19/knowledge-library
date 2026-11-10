@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../../schema/source.schema.json
+id: kl-001145
+display_id: Source-420
+label: Bastani et al. 2025 — Generative AI without guardrails can harm learning
+type: source
+layer: provenance
+definition: 'Generative AI without guardrails can harm learning: Evidence from high school mathematics'
+body:
+  kind: empirical_study
+  is_internal: false
+  title: 'Generative AI without guardrails can harm learning: Evidence from high school mathematics'
+  authors:
+  - Bastani
+  - Bastani
+  - Sungu
+  - Ge
+  - Kabakcı
+  - Mariman
+  year: 2025
+  venue: Proceedings of the National Academy of Sciences, 2025, Vol. 122, No. 26, e2422633122
+  identifier: 10.1073/pnas.2422633122
+  source_quality: A
+  design: randomized_controlled_trial
+  n_reported: 1000
+  population: adolescent
+  agent_studied: both
+  unit_of_analysis: between_person
+  peer_reviewed: journal
+  preregistered: true
+  replication_status: none_known
+  conflicts: not_assessed
+  integrity_flag: correction_issued
+  design_fits_own_claims: true
+  grade_reasoning: Preregistered field RCT with a designated primary analysis, nearly 1,000 students across about fifty classes, independent graders, peer-reviewed in PNAS. The design fits the paper's causal claim about tool arms.
+  design_caveat: One high school in Turkey, mathematics only, in-class review sessions rather than homework, and a research-built tool rather than a product. The arms compare whole tools, so the effect of any single response type is not isolated. The GPT Tutor prompt carried teacher-written solutions and common mistakes. The paper reports 'nearly 1,000' students; n_reported rounds that. A published correction exists (PNAS 2025;122(34):e2518204122) and was not read for this entry. Conflicts were not assessed.
+  canonical_record: Bastani, Bastani, Sungu, Ge, Kabakcı & Mariman 2025, PNAS 122(26):e2422633122, doi:10.1073/pnas.2422633122; open-access full text PMC12232635.
+  license_status: known_permissive
+  license_terms: CC BY-NC-ND 4.0 (as stated on the article)
+  verified_as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'

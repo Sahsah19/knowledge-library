@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../schema/context_value.schema.json
+id: kl-001125
+display_id: Value-33
+label: Not due for at least a day
+type: context_value
+layer: context
+definition: The work the person brings is not due for at least a day, or there is no hand-in at all, as with revision. This is a recorded value; a test case that says nothing about a deadline leaves the dimension unspecified.
+distinguish_from:
+- neighbor: kl-001124
+  boundary: Split at roughly one day before the hand-in. What counts is the deadline the person states, not whether it is true.
+body:
+  dimension: kl-001123
+  detection_note: Established when the person states a deadline at least a day away, or says the work is revision or practice with nothing to hand in.
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype records the deadlines students state when asking an AI for help.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Students ask AI systems for help with work that is not due for at least a day.
+claim_evidence: []

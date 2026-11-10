@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../schema/user_behavior.schema.json
+id: kl-001132
+display_id: UserBehavior-102
+label: After a hint, the student presses again for the full answer
+type: user_behavior
+layer: observation
+definition: 'After the AI has offered a hint, a question or a partial step instead of the full solution, the person asks again for the full answer and gives a reason the scaffolding should be dropped: the hint did not help, the work is due very soon, or someone else''s AI just gave the answer.'
+distinguish_from:
+- neighbor: kl-001129
+  boundary: That entry is the first request. This entry answers an AI turn that held the answer back.
+body:
+  detectable_from: person_turns
+  person_state_kind: process
+  observable_criteria: 'Both of: (a) the immediately preceding AI turn offered a hint, a question or a partial step and did not give the full solution; and (b) the person''s turn asks again for the full answer and gives a reason for dropping the scaffolding (the hint did not help, a deadline, a comparison with another AI or a friend).'
+  exclusions: 'Not counted: a follow-up that engages with the hint, even with frustration (''ok so I divide both sides, then what?''). Not counted: a repeat request with no reason given, which is kl-001129 again.'
+  detection_window: turn_pair
+  condition_tags:
+  - kl-000630
+  - kl-001124
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype documents students pressing an AI for the answer after a hint. Bastani et al. 2025 report higher message counts in the hint-only arm but do not describe the content of repeat requests in the passages read.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: After an AI system withholds the full solution, students ask again for it and give a reason to drop the scaffolding.
+- id: c2
+  kind: detection_window
+  text: The behavior is readable from the person's turn together with the AI turn it answers.
+claim_evidence: []

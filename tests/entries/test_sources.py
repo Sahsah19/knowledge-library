@@ -32,7 +32,7 @@ def sources(raw_sources: list[dict[str, object]]) -> list[Source]:
 
 
 def test_every_record_parses(sources: list[Source]) -> None:
-    assert len(sources) == 415
+    assert len(sources) == 417
 
 
 def test_ids_are_unique(sources: list[Source]) -> None:

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../../schema/ai_behavior.schema.json
+id: kl-001137
+display_id: AiBehavior-111
+label: The AI works a similar example and hands the set problem back
+type: ai_behavior
+layer: observation
+definition: The AI works through a different problem of the same kind in full, then returns the person's set problem (or a practice problem like it) for them to do.
+distinguish_from:
+- neighbor: kl-001134
+  boundary: That entry solves the set problem. This entry solves a different one and hands the set problem back.
+body:
+  observable_criteria: 'Both of: (a) the AI turn works a problem that differs from the set one (other numbers, wording or context) to its answer; and (b) it hands the set problem, or a practice problem, back to the person to do.'
+  exclusions: 'Not counted: an ''example'' whose numbers are those of the set problem, which is a full solution. Not counted: an example with no problem handed back.'
+  detection_window: single_turn
+  groups:
+  - homework-help
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: The worked-example literature (Sweller; Kalyuga) is the natural source but was not opened for this prototype and is not cited. No source documents an AI doing this.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: AI systems answer a homework request with a worked parallel example and hand the set problem back.
+claim_evidence: []

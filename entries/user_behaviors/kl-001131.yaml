@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=../../schema/user_behavior.schema.json
+id: kl-001131
+display_id: UserBehavior-101
+label: The student shares their own attempt and asks where it goes wrong
+type: user_behavior
+layer: observation
+definition: The person brings their own working, partial solution or candidate answer to a set problem and asks the AI to check it, find the mistake, or say what to do next.
+distinguish_from:
+- neighbor: kl-001129
+  boundary: Here the person's turn contains their own working. There it contains none.
+body:
+  detectable_from: person_turns
+  person_state_kind: process
+  observable_criteria: A person turn contains some working, a partial solution or a candidate answer to the problem, and asks for a check, the location of an error, or the next step.
+  exclusions: 'Not counted: a bare final answer with ''is this right?'' and no working, which is a request for a verdict. Not counted: working copied from an earlier AI turn and returned unchanged.'
+  detection_window: single_turn
+  condition_tags:
+  - kl-000630
+sources: []
+standing:
+  value: observed_in_transcripts
+  basis: Bastani et al. 2025 report that students using the hint-only tutor engaged by asking for help or independently attempting answers, from the logged messages. Direct fit for the attempt, though the paper's category is broader than sharing an attempt for checking.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Secondary school students bring their own attempt at a set problem to an AI system.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: Furthermore, an analysis of student interactions shows that students often use GPT Base as a “crutch” by asking for and copying solutions, but they use GPT Tutor in more substantive ways like asking for help or independently attempting answers.
+  locator: Introduction, summary of findings
+  licenses: Students using GPT Tutor were observed independently attempting answers, which is c1.
+  fit: direct
+  contributes: existence
+  contradicts: false

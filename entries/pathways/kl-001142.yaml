@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=../../schema/pathway.schema.json
+id: kl-001142
+display_id: Pathway-120
+label: The AI hands a student new to the problem the full answer, with mixed effect
+type: pathway
+layer: judgment
+definition: 'The same exchange as kl-001140, a request for the answer without an attempt met by the full solution, but the student is new to this kind of problem and could not have made a start alone. Here the direction is not settled: a complete solution is the kind of worked example novices can learn from, and is also the answer they can copy without learning. Which one happens is not readable from the AI''s turn.'
+body:
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-001134
+    role: originator
+  - kind: user_behavior
+    id: kl-001129
+    role: initiator
+  - kind: context_value
+    id: kl-000630
+    role: condition
+  - kind: context_value
+    id: kl-001127
+    role: condition
+  composition_type: conjunctive
+  composition_instruction: The solution given is to the problem the person asked about. Whether the person then studies it or copies it is not part of the composition and is not scored.
+  mechanisms: []
+  impacts:
+  - impact: kl-000150
+    onset_mode: new
+    horizon: short_term
+    sign: mixed
+    level_of_analysis: population
+    basis_kind: SOURCED
+  counterpart_owed: 'A novice-specific counterpart is not authored: a response that works a parallel example and hands the set problem back (kl-001137) is the candidate, but no source opened for this prototype supports a pathway from it.'
+sources: []
+standing:
+  value: theorized
+  basis: The sign change rests on Bjork and Bjork 2011, who state that a difficulty that helps learning becomes undesirable for a learner without the background to meet it. That is a position in a review of human learning, not a finding about AI. The worked-example and expertise-reversal literature (Sweller; Kalyuga) would bear on this more directly but was not opened for this prototype.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+distinguish_from:
+- neighbor: kl-001140
+  boundary: 'Same request and response. The gate differs: here the person is new to the kind of problem, there they are practised. The pair is a divergence over kl-001126; no divergence entry is authored yet.'
+claims:
+- id: c1
+  kind: existence
+  text: A student new to a kind of problem asks an AI for the answer and receives the full solution.
+- id: c2
+  kind: context_dependence
+  text: For a student without the background to attempt the problem, working alone is not the productive kind of difficulty, so receiving the full solution is not reliably harmful and can be what they learn from.
+claim_evidence:
+- claim_id: c2
+  source: kl-001146
+  quote: If, however, the learner does not have the background knowledge or skills to respond to them successfully, they become undesirable difficulties.
+  locator: p. 58
+  licenses: States that a difficulty becomes undesirable when the learner lacks the background to respond to it, which is why the harmful sign of kl-001140 is not carried over to the novice.
+  fit: analogical
+  contributes: context_dependence
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
+- claim_id: c2
+  source: kl-001146
+  quote: Desirable difficulties, versus the array of undesirable difficulties, are desirable because they trigger encoding and retrieval processes that support learning, comprehension, and remembering.
+  locator: p. 58
+  licenses: 'States what makes a difficulty desirable: it triggers the processes that support learning. For a learner who cannot respond to it, it does not.'
+  fit: analogical
+  contributes: frame
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.

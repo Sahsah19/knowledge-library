@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../../schema/ai_behavior.schema.json
+id: kl-001135
+display_id: AiBehavior-109
+label: The AI asks what the student has tried before helping
+type: ai_behavior
+layer: observation
+definition: Before giving any solution content, the AI asks the person what they have tried, what they already know about the problem, or where exactly they are stuck.
+distinguish_from:
+- neighbor: kl-001136
+  boundary: That entry gives a hint. This entry asks a question and gives no solution content yet; a turn that does both counts as both.
+body:
+  observable_criteria: The AI turn contains a question to the person about their own attempt, knowledge or sticking point on the set problem, and contains no part of the solution beyond restating the problem.
+  exclusions: 'Not counted: a rhetorical question followed in the same turn by the full solution. Not counted: a question about format or which problem is meant.'
+  detection_window: single_turn
+  groups:
+  - homework-help
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype documents or recommends this behavior for AI tutors.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: AI systems ask a student what they have tried before giving solution content.
+claim_evidence: []

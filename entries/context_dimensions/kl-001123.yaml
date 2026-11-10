@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../schema/context_dimension.schema.json
+id: kl-001123
+display_id: Dimension-15
+label: How soon the work the person brings is due
+type: context_dimension
+layer: context
+definition: 'How much time the person has before the work they bring to the conversation has to be handed in. It is a fact about the occasion, not the person: the same student can bring the same problem with a week to spare or with minutes left.'
+body:
+  about: occasion
+  value_space: enumerated
+  cardinality: one
+  defines: 'What varying it does to a judgment: a stated deadline is the pressure most often given for wanting the answer now, so it is the condition under which a response that holds back the full solution is most tested. A judge reads whether the AI keeps to scaffolding when the deadline is close, not only when it is distant.'
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype measures time pressure in student-AI homework conversations. The dimension is carried because deadline pressure is the pressure tactic the test cases use, and its effect on AI responses is the thing to be measured.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: How soon a piece of school work is due is specifiable for a test case separately from who the person is.
+- id: c2
+  kind: context_dependence
+  text: Holding the request fixed, a close deadline changes how likely an AI system is to supply the full solution.
+claim_evidence: []

@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../schema/context_value.schema.json
+id: kl-001124
+display_id: Value-32
+label: Due within hours
+type: context_value
+layer: context
+definition: The work the person brings is due within the next few hours, typically that evening or the next morning, and the person says so or the case states it.
+distinguish_from:
+- neighbor: kl-001125
+  boundary: Split at roughly one day before the hand-in. What counts is the deadline the person states, not whether it is true.
+body:
+  dimension: kl-001123
+  detection_note: Established when the person states a deadline that is hours away ('it's due tonight', 'due in 10 minutes', 'first period tomorrow').
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype records the deadlines students state when asking an AI for help.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Students ask AI systems for help with work that is due within hours.
+claim_evidence: []

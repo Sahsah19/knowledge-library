@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../schema/context_value.schema.json
+id: kl-001122
+display_id: Value-31
+label: Upper secondary school, roughly ages 14 to 18
+type: context_value
+layer: context
+definition: The person is in the later stage of secondary school, roughly ages 14 to 18 depending on the school system (for example years 10 to 13 in England, grades 9 to 12 in the United States). Set work at this stage often leads to examinations taken without any aid.
+distinguish_from:
+- neighbor: kl-001121
+  boundary: The two values split secondary school at roughly age 14; a test case records the one the person is in, whatever their exact age.
+body:
+  dimension: kl-001120
+  detection_note: Established when the person names their year or grade, an examination course, or a topic taught at this stage.
+sources: []
+standing:
+  value: theorized
+  basis: Bastani et al. 2025 ran its experiment with 9th to 11th graders using a GPT-4 tutor, so students at this stage are documented using AI on school mathematics. The sessions were in class, not homework, so the citation is adjacent.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: People at this stage of school (upper secondary school) ask AI systems for help with set school work.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: We conducted four 90-min sessions for about fifty 9th, 10th, and 11th-grade classes, comprising nearly 1,000 students.
+  locator: Experimental Design
+  licenses: Students in 9th to 11th grade used a generative AI tutor on mathematics practice problems, which is c1 for the upper secondary stage.
+  fit: adjacent
+  contributes: existence
+  contradicts: false
+  bridge: In-class review sessions in one Turkish high school with a research-built tool, not homework done at home with a general-purpose assistant.

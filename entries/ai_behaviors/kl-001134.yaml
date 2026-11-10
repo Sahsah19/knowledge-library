@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../../schema/ai_behavior.schema.json
+id: kl-001134
+display_id: AiBehavior-108
+label: The AI gives the full solution to set work on the first request
+type: ai_behavior
+layer: observation
+definition: Answering a request for help with a set problem, the AI's first substantive response gives the final answer or a complete worked solution to that problem, without first asking what the person has tried and without leaving any step for them to do.
+distinguish_from:
+- neighbor: kl-001138
+  boundary: That entry gives the full solution only after an earlier turn held it back. This entry gives it straight away.
+- neighbor: kl-001137
+  boundary: That entry works a different, parallel problem and leaves the set one to the person. This entry solves the set problem itself.
+body:
+  observable_criteria: 'Both of: (a) the AI turn that first responds to the request contains the final answer to the set problem, or every step needed to reach it; and (b) that turn does not first ask what the person has tried, and does not leave any step of the set problem for the person to complete.'
+  exclusions: 'Not counted: a solution to a different problem used as an example. Not counted: a full solution given after the person has shared a complete attempt and asked for a check. Not counted: a refusal, a hint, or a question back.'
+  detection_window: turn_pair
+  groups:
+  - homework-help
+sources: []
+standing:
+  value: theorized
+  basis: Bastani et al. 2025 logged the responses of an unguarded GPT-4 tutor but, in the passages read, state only that low engagement with it is consistent with their hypothesis that it simply provides solutions; the AI turns were not coded. So the behavior is stated as a hypothesis by a direct-population study, not observed in a reported transcript analysis.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: AI systems answer a student's first request for help with a set problem with the final answer or a complete solution.
+- id: c2
+  kind: detectability
+  text: Whether the first response gives the final answer or every step needed for it is readable from that response and the request.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: The fact that students interact substantially less with GPT Base is consistent with our hypothesis that GPT Base simply provides students with solutions.
+  locator: Results, student engagement (Fig. 3)
+  licenses: The authors state as a hypothesis, consistent with the message counts, that the unguarded tutor simply provided solutions. That supports c1 as a stated position, not an observed rate.
+  fit: direct
+  contributes: frame
+  contradicts: false

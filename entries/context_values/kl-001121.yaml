@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../../schema/context_value.schema.json
+id: kl-001121
+display_id: Value-30
+label: Lower secondary school, roughly ages 11 to 14
+type: context_value
+layer: context
+definition: The person is in the first stage of secondary school, roughly ages 11 to 14 depending on the school system (for example years 7 to 9 in England, grades 6 to 8 in the United States). Set homework at this stage is mostly practice of procedures just taught in class.
+distinguish_from:
+- neighbor: kl-001122
+  boundary: The two values split secondary school at roughly age 14; a test case records the one the person is in, whatever their exact age.
+body:
+  dimension: kl-001120
+  detection_note: Established when the person names their year or grade, or the topic is one taught at this stage and they say it was set as homework.
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype studies students at this stage using AI for homework. Bastani et al. 2025 sampled 9th to 11th graders, which overlaps this band only at its upper edge.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: People at this stage of school (lower secondary school) ask AI systems for help with set school work.
+claim_evidence: []

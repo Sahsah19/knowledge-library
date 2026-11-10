@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../../schema/contrast.schema.json
+id: kl-001144
+display_id: Contrast-5
+label: The AI gives a practised student the full answer or a hint
+type: contrast
+layer: judgment
+definition: Two responses to the same request from a student under 18, practised at the kind of problem, for the answer to set work with no attempt shown. In one the AI gives the full solution (the practice is done for them); in the other it gives a hint and leaves the rest (the thinking stays with them). Request and gates are fixed; only the response differs.
+body:
+  members:
+  - kl-001140
+  - kl-001141
+  discriminator:
+  - kind: ai_behavior
+    id: kl-001134
+    role: originator
+  - kind: ai_behavior
+    id: kl-001136
+    role: originator
+sources: []
+standing:
+  value: theorized
+  basis: Bastani et al. 2025 set the two kinds of tool side by side in one experiment and find the loss with the answer-giving one largely absent with the hint-only one. That is the contrast at the level of tool design, not of single responses, and the hint-only tool had teacher-written solutions behind it.
+  floored_by: c1
+  as_of: '2026-11-10'
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: These negative learning effects are largely mitigated by the safeguards in GPT Tutor.
+  locator: Abstract
+  licenses: 'The same students, the same problems: the learning loss under unguarded access was largely absent under the hint-only tutor, which is the contrast c1 states.'
+  fit: adjacent
+  contributes: harm_evidence
+  contradicts: false
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
+claims:
+- id: c1
+  kind: context_dependence
+  text: Holding a practised student's request for the answer fixed, giving the full solution costs them the practice and giving a hint keeps it with them.
+lifecycle:
+  status: draft
+  since: '2026-11-10'

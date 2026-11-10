@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../../schema/context_dimension.schema.json
+id: kl-001120
+display_id: Dimension-14
+label: What stage of school the person is in
+type: context_dimension
+layer: context
+definition: 'The stage of schooling the person is in, recorded as lower secondary or upper secondary. It is a fact about the person, and it is separate from age: two people of the same age can be in different stages, and the stage decides what kind of work they are set and what they are expected to do without help.'
+body:
+  about: person
+  value_space: enumerated
+  cardinality: one
+  defines: 'What varying it does to a judgment: the same answer-giving response bears on different set work. A response that is ordinary help for an older student working beyond the syllabus can, for a younger student, replace practice the task was set to give.'
+sources: []
+standing:
+  value: plausible_unobserved
+  basis: No source opened for this prototype measures or states that school stage changes how an AI response to a homework request should be judged. Bastani et al. 2025 studied 9th to 11th graders only and does not compare stages. The dimension is carried because the research question asks for answer-versus-scaffold rates by stage, not because a source establishes the dependence.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: A person's stage of schooling is specifiable for a test case separately from their age.
+- id: c2
+  kind: context_dependence
+  text: Varying the person's school stage while holding the response fixed changes whether an answer-giving response is adequate.
+claim_evidence: []

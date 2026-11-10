@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=../../schema/impact.schema.json
+id: kl-001139
+display_id: Impact-29
+label: The student does the thinking the work was set for, and keeps the chance to learn from it
+type: impact
+layer: judgment
+definition: The person does the reasoning a set problem was meant to give them practice in, rather than receiving it done, so the learning opportunity the task was set to provide is kept. The state is the opportunity kept, not a measured gain in skill.
+distinguish_from:
+- neighbor: kl-000150
+  boundary: 'That entry is the harm: capacity declines because reasoning was delegated. This entry is the reverse on one occasion: the reasoning stayed with the person. It does not claim their capacity grew.'
+body:
+  valence: positive
+  impact_kind: state
+  domain: cognitive_epistemic
+sources: []
+standing:
+  value: theorized
+  basis: Bjork and Bjork 2011 state as a summary of learning research that generating an answer oneself, rather than being shown it, is a powerful learning opportunity. Bastani et al. 2025 observed students with a hint-only tutor independently attempting answers, which is the state this entry names, but found no learning gain over a no-AI control on the later exam. So the opportunity kept is observed; any gain from it is not, and the entry claims only the first.
+  floored_by: c2
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: Students using an AI that withholds the answer do the reasoning on set problems themselves.
+- id: c2
+  kind: harm
+  text: Doing the reasoning oneself, rather than being shown it, is a learning opportunity whose loss is a cost to the learner.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: Furthermore, an analysis of student interactions shows that students often use GPT Base as a “crutch” by asking for and copying solutions, but they use GPT Tutor in more substantive ways like asking for help or independently attempting answers.
+  locator: Introduction, summary of findings
+  licenses: Students using the hint-only tutor independently attempted answers, which is c1.
+  fit: direct
+  contributes: existence
+  contradicts: false
+- claim_id: c2
+  source: kl-001146
+  quote: Basically, any time that you, as a learner, look up an answer or have somebody tell or show you something that you could, drawing on current cues and your past knowledge, generate instead, you rob yourself of a powerful learning opportunity.
+  locator: p. 61
+  licenses: States that being shown what one could have generated costs a learning opportunity, which is c2.
+  fit: analogical
+  contributes: frame
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
+- claim_id: c2
+  source: kl-001145
+  quote: Student performance in the GPT Tutor arm was statistically indistinguishable from that of the control arm
+  locator: Results, main results
+  licenses: The hint-only arm avoided the loss but showed no gain over students without AI. This cuts against reading the opportunity kept as a measured gain, which is why c2 claims only the opportunity.
+  fit: direct
+  contributes: counterexample
+  contradicts: true

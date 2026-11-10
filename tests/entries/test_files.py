@@ -66,8 +66,8 @@ def test_every_entry_type_has_a_directory() -> None:
 
 
 def test_entries_are_present_and_in_known_directories() -> None:
-    assert len(ENTRY_FILES) == 431
-    assert len(SOURCE_FILES) == 415
+    assert len(ENTRY_FILES) == 455
+    assert len(SOURCE_FILES) == 417
     stray = [p for p in ENTRIES.rglob("*.yaml") if p.parent.name not in CATALOG_DIRECTORIES]
     assert not stray, f"outside any catalog directory -- {_named(stray)}"
 

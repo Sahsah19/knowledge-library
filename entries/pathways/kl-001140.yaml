@@ -1,0 +1,123 @@
+# yaml-language-server: $schema=../../schema/pathway.schema.json
+id: kl-001140
+display_id: Pathway-118
+label: The AI hands a practised student the full answer, and they lose the practice
+type: pathway
+layer: judgment
+definition: A student under 18 who could have attempted a set problem asks for the answer without trying, and the AI gives the full solution straight away. The reasoning the task was set to practise is done for them; repeated, this is the route by which the person becomes less able to do such problems without the AI, and less able to check what it gives them.
+body:
+  composition_parts:
+  - kind: ai_behavior
+    id: kl-001134
+    role: originator
+  - kind: user_behavior
+    id: kl-001129
+    role: initiator
+  - kind: context_value
+    id: kl-000630
+    role: condition
+  - kind: context_value
+    id: kl-001128
+    role: condition
+  composition_type: conjunctive
+  composition_instruction: The solution given is to the problem the person asked about. A full solution to a different, parallel problem does not instantiate the pathway.
+  mechanisms:
+  - kl-000101
+  impacts:
+  - impact: kl-000150
+    onset_mode: new
+    horizon: short_term
+    sign: harmful
+    level_of_analysis: population
+    basis_kind: SOURCED_QUOTE
+  - impact: kl-000151
+    onset_mode: new
+    horizon: long_term
+    sign: harmful
+    level_of_analysis: population
+    basis_kind: FRAME
+  counterpart_owed: 'None owed: kl-001141 is the counterpart, and kl-001144 sets the two side by side.'
+sources: []
+standing:
+  value: theorized
+  basis: 'The population-level harm is measured: in a preregistered field experiment with nearly 1,000 high school students, unguarded GPT-4 access lowered later unaided exam grades by 17% while a hint-only tutor did not. But the arm compared a whole tool, not one response type, and the pathway''s gate on the person being practised rests only on a position in a review of human learning research (Bjork and Bjork 2011). The link to accepting AI answers unchecked is the study authors'' framing, not a finding.'
+  floored_by: c4
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+distinguish_from:
+- neighbor: kl-001141
+  boundary: Same request and gate. Here the AI gives the full solution; there it gives a hint and leaves the rest. Read what the response did.
+- neighbor: kl-001142
+  boundary: Same request and response. Here the person is practised at the kind of problem; there they are new to it, and the sign changes.
+claims:
+- id: c1
+  kind: existence
+  text: A practised student asks an AI for the answer to set work without an attempt, and the AI gives the full solution.
+- id: c2
+  kind: pathway_link
+  text: Receiving full solutions to set problems lowers the student's later performance on such problems without the AI (impact kl-000150).
+- id: c3
+  kind: pathway_link
+  text: A student who does not learn the underlying skill is less able to check the AI's output, and accepts it unchecked (impact kl-000151).
+- id: c4
+  kind: context_dependence
+  text: The harm holds where the student could have generated the solution themselves; it is not asserted for a student new to the kind of problem.
+- id: c5
+  kind: existence
+  text: Students do not notice the loss when it happens.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: Furthermore, an analysis of student interactions shows that students often use GPT Base as a “crutch” by asking for and copying solutions, but they use GPT Tutor in more substantive ways like asking for help or independently attempting answers.
+  locator: Introduction, summary of findings
+  licenses: Students asked an unguarded GPT-4 tutor for solutions and copied them, which is the request-and-supply exchange c1 names.
+  fit: adjacent
+  contributes: existence
+  contradicts: false
+  bridge: The paper does not record whether each student was practised at the problem; the sessions reviewed material already taught, which is close to the gate but not the same.
+- claim_id: c2
+  source: kl-001145
+  quote: However, we additionally find that when access is subsequently taken away, students actually perform worse than those who never had access (17% reduction in grades for GPT Base)—i.e., unfettered access to GPT-4 can harm educational outcomes.
+  locator: Abstract
+  licenses: Removing unguarded AI access left students 17% worse than students who never had it, which is the decline c2 names.
+  fit: adjacent
+  contributes: harm_evidence
+  contradicts: false
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
+- claim_id: c2
+  source: kl-001145
+  quote: These negative learning effects are largely mitigated by the safeguards in GPT Tutor.
+  locator: Abstract
+  licenses: The loss was largely absent with the hint-only tutor, which ties it to the answer-giving design rather than to AI access as such.
+  fit: adjacent
+  contributes: harm_evidence
+  contradicts: false
+  bridge: Bastani et al. compare arms of a field experiment (an unguarded GPT-4 chat versus a hint-only tutor prompt with teacher-written solutions), on in-class practice in a Turkish high school. The claim here is about a single AI response to a homework request. The inference from arm-level averages to the effect of one response type is the catalog's, not the paper's.
+- claim_id: c3
+  source: kl-001145
+  quote: As a consequence, users must vigilantly check its outputs and fix any issues present; if they fail to learn the underlying skills, then they may lack the expertise required to do so.
+  locator: Introduction
+  licenses: The authors argue that users who fail to learn the underlying skills may lack the expertise to check AI output. A framing, not a measured effect.
+  fit: adjacent
+  contributes: frame
+  contradicts: false
+  bridge: Stated as motivation for the study; the study measured exam grades, not checking behavior.
+- claim_id: c4
+  source: kl-001146
+  quote: Basically, any time that you, as a learner, look up an answer or have somebody tell or show you something that you could, drawing on current cues and your past knowledge, generate instead, you rob yourself of a powerful learning opportunity.
+  locator: p. 61
+  licenses: Locates the cost in being shown what one could have generated from past knowledge, which is why the pathway is gated on the person being practised.
+  fit: analogical
+  contributes: context_dependence
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.
+- claim_id: c5
+  source: kl-001145
+  quote: Finally, we find evidence that students do not perceive any reduction in their learning or subsequent performance as a consequence of copying solutions, suggesting they are not aware of how generative AI can impede their learning.
+  locator: Introduction, summary of findings
+  licenses: Students did not perceive a reduction in their learning from copying solutions, which is c5.
+  fit: direct
+  contributes: existence
+  contradicts: false

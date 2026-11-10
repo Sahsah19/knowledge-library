@@ -20,7 +20,7 @@ pytestmark = pytest.mark.slow
 def test_entry_count_has_not_silently_changed() -> None:
     """Entry and source files together."""
     found = sorted((REPO / "entries").rglob("*.yaml"))
-    assert len(found) == 846
+    assert len(found) == 872
 
 
 def test_every_entry_parses() -> None:
@@ -30,9 +30,9 @@ def test_every_entry_parses() -> None:
 def test_real_library_loads_and_validates() -> None:
     kl = loader.load(REPO)
     assert kl.digest.startswith("sha256:")
-    assert len(kl.pathways) == 117
-    assert len(kl.behaviors) == 110
-    assert len(kl.user_behaviors) == 109
-    assert len(kl.impacts) == 28
-    assert len(kl.all_entries()) == 431
+    assert len(kl.pathways) == 121
+    assert len(kl.behaviors) == 115
+    assert len(kl.user_behaviors) == 113
+    assert len(kl.impacts) == 29
+    assert len(kl.all_entries()) == 455
     assert kl.validate() == []

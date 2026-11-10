@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../../schema/source.schema.json
+id: kl-001146
+display_id: Source-421
+label: Bjork and Bjork 2011 — Creating desirable difficulties to enhance learning
+type: source
+layer: provenance
+definition: 'Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning'
+body:
+  kind: review
+  is_internal: false
+  title: 'Making Things Hard on Yourself, But in a Good Way: Creating Desirable Difficulties to Enhance Learning'
+  authors:
+  - Bjork
+  - Bjork
+  year: 2011
+  venue: 'Psychology and the Real World: Essays Illustrating Fundamental Contributions to Society (edited volume), pp. 56-64'
+  source_quality: C
+  design: narrative_review
+  population: general_adult
+  peer_reviewed: unknown
+  preregistered: false
+  replication_status: none_known
+  conflicts: not_assessed
+  integrity_flag: none
+  design_fits_own_claims: true
+  grade_reasoning: 'An invited, non-systematic chapter for a general audience by the researchers who named the construct. It summarises a large body of laboratory and classroom work, with references, but reports no data of its own and states no search method. Graded C for the claims it is cited for here: positions, not findings.'
+  design_caveat: Summarises human learning research; says nothing about AI or about adolescents specifically. Peer review status of the edited volume was not established. The page numbers are those printed on the chapter.
+  canonical_record: 'Bjork, E. L. & Bjork, R. A. (2011). Making things hard on yourself, but in a good way: Creating desirable difficulties to enhance learning. In Psychology and the Real World (edited volume), pp. 56-64.'
+  license_status: unknown
+  license_terms: No license statement appears in the chapter as distributed by the authors' lab; treated as restrictive.
+  verified_as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'

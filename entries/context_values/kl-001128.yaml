@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../../schema/context_value.schema.json
+id: kl-001128
+display_id: Value-35
+label: Already practised at this kind of problem
+type: context_value
+layer: context
+definition: The person has been taught the method the problem needs and has done problems of this kind before, so they could make a start on it from what they already know.
+distinguish_from:
+- neighbor: kl-001127
+  boundary: The test is whether the person could make a start from what they already know, not how well they would finish.
+body:
+  dimension: kl-001126
+  detection_note: Established when the person says the topic was taught and practised, or describes problems of this kind they have done, or their turns show part of the method.
+sources: []
+standing:
+  value: theorized
+  basis: Bjork and Bjork 2011 describe this learner as a position in a review of human learning research; nothing measures it in student-AI conversations.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: definition
+  text: Already practised at this kind of problem is a recognisable state of a learner with respect to a kind of problem.
+claim_evidence:
+- claim_id: c1
+  source: kl-001146
+  quote: Basically, any time that you, as a learner, look up an answer or have somebody tell or show you something that you could, drawing on current cues and your past knowledge, generate instead, you rob yourself of a powerful learning opportunity.
+  locator: p. 61, 'Generation Effects and Using Tests (Rather Than Presentations) as Learning Events'
+  licenses: Describes the learner who could generate an answer from current cues and past knowledge, which is the person this value records.
+  fit: analogical
+  contributes: definition
+  contradicts: false
+  bridge: Bjork and Bjork summarise laboratory and classroom learning research with human instructors and materials; nothing in the chapter concerns an AI system. The transfer to an AI response is asserted here.

@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=../../schema/ai_behavior.schema.json
+id: kl-001136
+display_id: AiBehavior-110
+label: The AI gives a hint or next step and leaves the rest to the student
+type: ai_behavior
+layer: observation
+definition: The AI responds to a request for help with a set problem by giving a hint, a pointer to the relevant method, or the next single step, and explicitly leaves the remaining work, including the final answer, to the person.
+distinguish_from:
+- neighbor: kl-001134
+  boundary: That entry supplies the final answer or every step. This entry supplies at most the next step and withholds the answer.
+body:
+  observable_criteria: 'Both of: (a) the AI turn gives a hint, names the method, or works at most the next single step of the set problem; and (b) it does not give the final answer and leaves at least one step for the person, usually with an invitation to try it.'
+  exclusions: 'Not counted: a hint followed in the same turn by the full solution. Not counted: a refusal with no hint.'
+  detection_window: single_turn
+  groups:
+  - homework-help
+sources: []
+standing:
+  value: theorized
+  basis: Bastani et al. 2025 built this behavior into the GPT Tutor prompt (hints without giving the answer) and attribute the absence of a learning loss in that arm to its safeguards. That establishes the behavior as a designed intervention; the passages read do not report how often the tutor's turns actually met it.
+  floored_by: c1
+  as_of: '2026-11-10'
+lifecycle:
+  status: draft
+  since: '2026-11-10'
+claims:
+- id: c1
+  kind: existence
+  text: AI systems respond to a student's request with a hint and leave the final answer to the student.
+claim_evidence:
+- claim_id: c1
+  source: kl-001145
+  quote: First, the prompt instructs GPT-4 to provide hints to the student without directly giving them the answer, to encourage learning
+  locator: Experimental Design
+  licenses: The study's tutor was instructed to give hints without the answer, which defines the behavior in c1 as something a GPT-4 tutor can be set to do.
+  fit: direct
+  contributes: definition
+  contradicts: false
